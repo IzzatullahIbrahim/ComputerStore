@@ -8,9 +8,10 @@ using ComputerStore.Data;
 namespace ComputerStore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170218163937_ChangeGalleryDescription")]
+    partial class ChangeGalleryDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -126,7 +127,7 @@ namespace ComputerStore.Data.Migrations
 
                     b.Property<string>("Motherboard");
 
-                    b.Property<string>("OperatingSystem");
+                    b.Property<int>("MyProperty");
 
                     b.Property<decimal>("Price");
 

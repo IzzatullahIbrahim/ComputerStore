@@ -16,12 +16,28 @@ namespace ComputerStore.Controllers {
     }
 
     export class LaptopsController {
-        public message = 'Laptops Controller Working';
+        public message = 'Laptops Controller is working';
+        public message2 = 'Laptop Controller is working'
         public laptops;
 
         constructor(private $http: ng.IHttpService) {
             this.$http.get('/api/laptops').then((response) => {
                 this.laptops = response.data;
+            })
+        }
+    }
+
+    export class AddLaptopController {
+        public message = 'Add a Laptop Controller is working'
+        public laptop;
+
+        constructor(private $http: ng.IHttpService, private $state: ng.ui.IStateService) {
+
+        }
+
+        public addLaptop() {
+            this.$http.post('api/laptops', this.laptop).then((response) => {
+                this.$state.go('home');
             })
         }
     }

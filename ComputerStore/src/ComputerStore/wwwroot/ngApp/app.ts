@@ -55,6 +55,18 @@ namespace ComputerStore {
                 controller: ComputerStore.Controllers.LaptopsController,
                 controllerAs: 'controller'
             })
+            .state('laptop', {
+                url: '/laptop/:id',
+                templateUrl: '/ngApp/views/laptop.html',
+                controller: ComputerStore.Controllers.LaptopsController,
+                controllerAs: 'controller'
+            })
+            .state('addLaptop', {
+                url: '/addLaptop',
+                templateUrl: '/ngApp/views/addLaptop.html',
+                controller: ComputerStore.Controllers.AddLaptopController,
+                controllerAs: 'controller'
+            })
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'

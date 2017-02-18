@@ -8,9 +8,10 @@ using ComputerStore.Data;
 namespace ComputerStore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170218155927_AddQuantityAnd6GalleryDescription")]
+    partial class AddQuantityAnd6GalleryDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -88,19 +89,17 @@ namespace ComputerStore.Data.Migrations
 
                     b.Property<string>("GPU");
 
-                    b.Property<string>("GalleryDisplay");
+                    b.Property<string>("GalleryDescription1");
 
-                    b.Property<string>("GalleryGPU");
+                    b.Property<string>("GalleryDescription2");
 
-                    b.Property<string>("GalleryMemory");
+                    b.Property<string>("GalleryDescription3");
 
-                    b.Property<string>("GalleryOS");
+                    b.Property<string>("GalleryDescription4");
 
-                    b.Property<string>("GalleryProcessor");
+                    b.Property<string>("GalleryDescription5");
 
-                    b.Property<string>("GalleryStorage");
-
-                    b.Property<string>("GalleryWireless");
+                    b.Property<string>("GalleryDescription6");
 
                     b.Property<string>("IOInput1");
 
@@ -125,8 +124,6 @@ namespace ComputerStore.Data.Migrations
                     b.Property<string>("Model");
 
                     b.Property<string>("Motherboard");
-
-                    b.Property<string>("OperatingSystem");
 
                     b.Property<decimal>("Price");
 

@@ -16,6 +16,7 @@ namespace ComputerStore.Models
         public string Motherboard { get; set; }
         public string Memory { get; set; }
         public string GPU { get; set; }
+        public string OperatingSystem { get; set; }
         public string IOInput1 { get; set; }
         public string IOInput2 { get; set; }
         public string IOInput3 { get; set; }
@@ -31,5 +32,13 @@ namespace ComputerStore.Models
         public string Ethernet { get; set; }
         public string Wireless { get; set; }
         public string Bluetooth { get; set; }
+        public int Quantity { get; set; }
+        public string GalleryProcessor { get; set; }
+        public string GalleryDisplay { get; set; }
+        public string GalleryGPU { get; set; }
+        public string GalleryMemory { get; set; }
+        public string GalleryStorage { get; set; }
+        public string GalleryWireless { get; set; }
+        public string GalleryOS { get; set; }
     }
 }
