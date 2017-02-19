@@ -1,4 +1,5 @@
-﻿{{controller.message2}}
+﻿{{controller.message}}
+<h1>TAI KUDA</h1>
 
 <div class="container-fluid">
     <table class="table table-striped table-bordered">
@@ -16,7 +17,7 @@
                     Chipset
                 </td>
                 <td>
-                    {{l.motherboard}}
+                    {{controller.laptop.motherboard}}
                 </td>
             </tr>
             <tr>
@@ -24,7 +25,7 @@
                     Memory
                 </td>
                 <td>
-                    {{l.memory}}
+                    {{controller.laptop.memory}}
                 </td>
             </tr>
             <tr>
@@ -32,7 +33,7 @@
                     Display
                 </td>
                 <td>
-                    {{l.display}}
+                    {{controller.laptop.display}}
                 </td>
             </tr>
             <tr>
@@ -40,7 +41,7 @@
                     Graphic Processor
                 </td>
                 <td>
-                    {{l.gpu}}
+                    {{controller.laptop.gpu}}
                 </td>
             </tr>
             <tr>
@@ -49,10 +50,10 @@
                 </td>
                 <td>
                     <ul>
-                        <li>{{l.storage1}}</li>
-                        <li>{{l.storage2}}</li>
-                        <li>{{l.storage3}}</li>
-                        <li>{{l.storage4}}</li>
+                        <li>{{controller.laptop.storage1}}</li>
+                        <li>{{controller.laptop.storage2}}</li>
+                        <li>{{controller.laptop.storage3}}</li>
+                        <li>{{controller.laptop.storage4}}</li>
                     </ul>
                 </td>
             </tr>
@@ -61,7 +62,7 @@
                     Audio
                 </td>
                 <td>
-                    {{l.audio}}
+                    {{controller.laptop.audio}}
                 </td>
             </tr>
             <tr>
@@ -70,14 +71,14 @@
                 </td>
                 <td>
                     <ul>
-                        <li>{{l.ioInput1}}</li>
-                        <li>{{l.ioInput2}}</li>
-                        <li>{{l.ioInput3}}</li>
-                        <li>{{l.ioInput4}}</li>
-                        <li>{{l.ioInput5}}</li>
-                        <li>{{l.ioInput6}}</li>
-                        <li>{{l.ioInput7}}</li>
-                        <li>{{l.ioInput8}}</li>
+                        <li>{{controller.laptop.ioInput1}}</li>
+                        <li>{{controller.laptop.ioInput2}}</li>
+                        <li>{{controller.laptop.ioInput3}}</li>
+                        <li>{{controller.laptop.ioInput4}}</li>
+                        <li>{{controller.laptop.ioInput5}}</li>
+                        <li>{{controller.laptop.ioInput6}}</li>
+                        <li>{{controller.laptop.ioInput7}}</li>
+                        <li>{{controller.laptop.ioInput8}}</li>
                     </ul>
                 </td>
             </tr>
@@ -87,9 +88,9 @@
                 </td>
                 <td>
                     <ul>
-                        <li>{{l.ethernet}}</li>
-                        <li>{{l.wireless}}</li>
-                        <li>{{l.bluetooth}}</li>
+                        <li>{{controller.laptop.ethernet}}</li>
+                        <li>{{controller.laptop.wireless}}</li>
+                        <li>{{controller.laptop.bluetooth}}</li>
                     </ul>
                 </td>
             </tr>
@@ -99,8 +100,8 @@
                 </td>
                 <td>
                     <ul>
-                        <li>{{l.security1}}</li>
-                        <li>{{l.security2}}</li>
+                        <li>{{controller.laptop.security1}}</li>
+                        <li>{{controller.laptop.security2}}</li>
                     </ul>
                 </td>
             </tr>
@@ -110,8 +111,8 @@
                 </td>
                 <td>
                     <ul>
-                        <li>{{l.battery}}</li>
-                        <li>{{l.adapter}}</li>
+                        <li>{{controller.laptop.battery}}</li>
+                        <li>{{controller.laptop.adapter}}</li>
                     </ul>
                 </td>
             </tr>
@@ -120,7 +121,7 @@
                     Operating System
                 </td>
                 <td>
-                    {{l.operatingSystem}}
+                    {{controller.laptop.operatingSystem}}
                 </td>
             </tr>
             <tr>
@@ -129,8 +130,8 @@
                 </td>
                 <td>
                     <ul>
-                        <li>{{l.dimension}}</li>
-                        <li>{{l.weight}}</li>
+                        <li>{{controller.laptop.dimension}}</li>
+                        <li>{{controller.laptop.weight}}</li>
                     </ul>
                 </td>
             </tr>

@@ -43,28 +43,40 @@ namespace ComputerStore {
                 controller: ComputerStore.Controllers.AboutController,
                 controllerAs: 'controller'
             })
-            .state('products', {
-                url: '/products',
-                templateUrl: '/ngApp/views/products.html',
-                controller: ComputerStore.Controllers.ProductsController,
+            .state('categories', {
+                url: '/categories',
+                templateUrl: '/ngApp/views/categories.html',
+                controller: ComputerStore.Controllers.CategoriesController,
                 controllerAs: 'controller'
             })
-            .state('laptops', {
-                url: '/laptops',
-                templateUrl: '/ngApp/views/laptops.html',
-                controller: ComputerStore.Controllers.LaptopsController,
+            .state('category', {
+                url: '/categories/:id',
+                templateUrl: '/ngApp/views/category.html',
+                controller: ComputerStore.Controllers.CategoryController,
                 controllerAs: 'controller'
             })
             .state('laptop', {
                 url: '/laptop/:id',
                 templateUrl: '/ngApp/views/laptop.html',
-                controller: ComputerStore.Controllers.LaptopsController,
+                controller: ComputerStore.Controllers.LaptopController,
                 controllerAs: 'controller'
             })
             .state('addLaptop', {
                 url: '/addLaptop',
                 templateUrl: '/ngApp/views/addLaptop.html',
                 controller: ComputerStore.Controllers.AddLaptopController,
+                controllerAs: 'controller'
+            })
+            .state('editLaptop', {
+                url: '/editLaptop/:id',
+                templateUrl: '/ngApp/views/editLaptop.html',
+                controller: ComputerStore.Controllers.EditLaptopController,
+                controllerAs: 'controller'
+            })
+            .state('deleteLaptop', {
+                url: '/deleteLaptop/:id',
+                templateUrl: '/ngApp/views/deleteLaptop.html',
+                controller: ComputerStore.Controllers.DeleteLaptopController,
                 controllerAs: 'controller'
             })
             .state('notFound', {

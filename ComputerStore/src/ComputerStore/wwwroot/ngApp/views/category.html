@@ -1,0 +1,28 @@
+﻿{{controller.message}}
+
+<div class="container-fluid">
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr>
+                <td ng-repeat="c in controller.category.laptops">
+                    <a ui-sref="laptop({id: c.id})">
+                        <img ng-src="{{c.imageUrl}}" class="img-thumbnail" height="250" width="275" />
+                    </a>
+                    <ul>
+                        <li>{{c.galleryProcessor}}</li>
+                        <li>{{c.galleryDisplay}}</li>
+                        <li>{{c.galleryGPU}}</li>
+                        <li>{{c.galleryMemory}}</li>
+                        <li>{{c.galleryStorage}}</li>
+                        <li>{{c.galleryWireless}}</li>
+                        <li>{{c.galleryOS}}</li>
+                    </ul>
+                    <ul>
+                        <li><a ui-sref="editLaptop({id: c.id})" class="btn btn-primary">Edit Laptop</a></li>
+                        <li><a ui-sref="deleteLaptop({id: c.id})" class="btn btn-danger">Delete Laptop</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ComputerStore.Data;
 using ComputerStore.Models;
 
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+//For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ComputerStore.API
 {
@@ -26,6 +26,7 @@ namespace ComputerStore.API
             List<Laptop> laptops = (from l in _db.Laptops
                                     select new Laptop
                                     {
+                                        Category = l.Category,
                                         Id = l.Id,
                                         Brand = l.Brand,
                                         Model = l.Model,
@@ -78,6 +79,7 @@ namespace ComputerStore.API
                              where l.Id == id
                              select new Laptop
                              {
+                                 Category = l.Category,
                                  Id = l.Id,
                                  Brand = l.Brand,
                                  Model = l.Model,
@@ -138,8 +140,21 @@ namespace ComputerStore.API
             }
             else
             {
-                return BadRequest();
+                _db.Laptops.Update(laptop);
+                _db.SaveChanges();
+                return Ok();
             }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Laptop lapToDelete = (from l in _db.Laptops
+                                  where l.Id == id
+                                  select l).FirstOrDefault();
+            _db.Laptops.Remove(lapToDelete);
+            _db.SaveChanges();
+            return Ok();
         }
     }
 }

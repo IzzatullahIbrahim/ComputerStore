@@ -7,7 +7,7 @@ namespace ComputerStore.Models
 {
     public class Desktop : Computer
     {
-        public string FormFactor { get; set; }
-        public string Case { get; set; }
+        //public string FormFactor { get; set; }
+        //public string Case { get; set; }
     }
 }

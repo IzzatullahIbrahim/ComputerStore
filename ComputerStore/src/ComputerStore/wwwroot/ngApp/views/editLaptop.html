@@ -1,130 +1,125 @@
 ﻿{{controller.message}}
 
-<form ng-submit="controller.addLaptop()" class="form-control">
-    <label class="form-group">Category</label>
-    <select class="form-control" ng-model="controller.laptop.category.id" ng-options="cat.id as cat.name for cat in controller.categories">
-        <option value="">---Select a Category---</option>
-    </select>
-
-    <label class="form-group">Brand</label>
+<form ng-submit="controller.editLaptop()" class="form-control">
+    <label>Brand</label>
     <input type="text" ng-model="controller.laptop.brand" />
 
-    <label class="form-group">Model</label>
+    <label>Model</label>
     <input type="text" ng-model="controller.laptop.model" />
 
-    <label class="form-group">Price</label>
+    <label>Price</label>
     <input type="text" ng-model="controller.laptop.price" />
 
-    <label class="form-group">Image Url</label>
+    <label>Image Url</label>
     <input type="text" ng-model="controller.laptop.imageUrl" />
 
-    <label class="form-group">Processor</label>
+    <label>Processor</label>
     <input type="text" ng-model="controller.laptop.processor" />
 
-    <label class="form-group">Chipset</label>
+    <label>Chipset</label>
     <input type="text" ng-model="controller.laptop.motherboard" />
 
-    <label class="form-group">Memory</label>
+    <label>Memory</label>
     <input type="text" ng-model="controller.laptop.memory" />
 
-    <label class="form-group">GPU</label>
+    <label>GPU</label>
     <input type="text" ng-model="controller.laptop.gpu" />
 
-    <label class="form-group">OS</label>
+    <label>OS</label>
     <input type="text" ng-model="controller.laptop.operatingSystem" />
 
-    <label class="form-group">I/O Input 1</label>
+    <label>I/O Input 1</label>
     <input type="text" ng-model="controller.laptop.ioInput1" />
 
-    <label class="form-group">I/O Input 2</label>
+    <label>I/O Input 2</label>
     <input type="text" ng-model="controller.laptop.ioInput2" />
 
-    <label class="form-group">I/O Input 3</label>
+    <label>I/O Input 3</label>
     <input type="text" ng-model="controller.laptop.ioInput3" />
 
-    <label class="form-group">I/O Input 4</label>
+    <label>I/O Input 4</label>
     <input type="text" ng-model="controller.laptop.ioInput4" />
 
-    <label class="form-group">I/O Input 5</label>
+    <label>I/O Input 5</label>
     <input type="text" ng-model="controller.laptop.ioInput5" />
 
-    <label class="form-group">I/O Input 6</label>
+    <label>I/O Input 6</label>
     <input type="text" ng-model="controller.laptop.ioInput6" />
 
-    <label class="form-group">I/O Input 7</label>
+    <label>I/O Input 7</label>
     <input type="text" ng-model="controller.laptop.ioInput7" />
 
-    <label class="form-group">I/O Input 8</label>
+    <label>I/O Input 8</label>
     <input type="text" ng-model="controller.laptop.ioInput8" />
 
-    <label class="form-group">Storage 1</label>
+    <label>Storage 1</label>
     <input type="text" ng-model="controller.laptop.storage1" />
 
-    <label class="form-group">Storage 2</label>
+    <label>Storage 2</label>
     <input type="text" ng-model="controller.laptop.storage2" />
 
-    <label class="form-group">Storage 3</label>
+    <label>Storage 3</label>
     <input type="text" ng-model="controller.laptop.storage3" />
 
-    <label class="form-group">Storage 4</label>
+    <label>Storage 4</label>
     <input type="text" ng-model="controller.laptop.storage4" />
 
-    <label class="form-group">Ethernet</label>
+    <label>Ethernet</label>
     <input type="text" ng-model="controller.laptop.ethernet" />
 
-    <label class="form-group">Wireless</label>
+    <label>Wireless</label>
     <input type="text" ng-model="controller.laptop.wireless" />
 
-    <label class="form-group">Bluetooth</label>
+    <label>Bluetooth</label>
     <input type="text" ng-model="controller.laptop.bluetooth" />
 
-    <label class="form-group">Quantity</label>
+    <label>Quantity</label>
     <input type="text" ng-model="controller.laptop.quantity" />
 
-    <label class="form-group">Display</label>
+    <label>Display</label>
     <input type="text" ng-model="controller.laptop.display" />
 
-    <label class="form-group">Audio</label>
+    <label>Audio</label>
     <input type="text" ng-model="controller.laptop.audio" />
 
-    <label class="form-group">Security 1</label>
+    <label>Security 1</label>
     <input type="text" ng-model="controller.laptop.security1" />
 
-    <label class="form-group">Security 2</label>
+    <label>Security 2</label>
     <input type="text" ng-model="controller.laptop.security2" />
 
-    <label class="form-group">Battery</label>
+    <label>Battery</label>
     <input type="text" ng-model="controller.laptop.battery" />
 
-    <label class="form-group">Adapter</label>
+    <label>Adapter</label>
     <input type="text" ng-model="controller.laptop.adapter" />
 
-    <label class="form-group">Dimension</label>
+    <label>Dimension</label>
     <input type="text" ng-model="controller.laptop.dimension" />
 
-    <label class="form-group">Weight</label>
+    <label>Weight</label>
     <input type="text" ng-model="controller.laptop.weight" />
 
-    <label class="form-group">Gallery Processor</label>
+    <label>Gallery Processor</label>
     <input type="text" ng-model="controller.laptop.galleryProcessor" />
 
-    <label class="form-group">Gallery Display</label>
+    <label>Gallery Display</label>
     <input type="text" ng-model="controller.laptop.galleryDisplay" />
 
-    <label class="form-group">Gallery GPU</label>
+    <label>Gallery GPU</label>
     <input type="text" ng-model="controller.laptop.galleryGPU" />
 
-    <label class="form-group">Gallery Memory</label>
+    <label>Gallery Memory</label>
     <input type="text" ng-model="controller.laptop.galleryMemory" />
 
-    <label class="form-group">Gallery Storage</label>
+    <label>Gallery Storage</label>
     <input type="text" ng-model="controller.laptop.galleryStorage" />
 
-    <label class="form-group">Gallery Wireless</label>
+    <label>Gallery Wireless</label>
     <input type="text" ng-model="controller.laptop.galleryWireless" />
 
-    <label class="form-group">Gallery OS</label>
+    <label>Gallery OS</label>
     <input type="text" ng-model="controller.laptop.galleryOS" />
 
-    <input type="submit" value="Add Laptop" />
+    <input type="submit" value="Edit Laptop" />
 </form>
