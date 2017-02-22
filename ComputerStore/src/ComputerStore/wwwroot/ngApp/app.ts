@@ -55,6 +55,18 @@ namespace ComputerStore {
                 controller: ComputerStore.Controllers.CategoryController,
                 controllerAs: 'controller'
             })
+            .state('addCategory', {
+                url: '/addCategory',
+                templateUrl: '/ngApp/views/addCategory.html',
+                controller: ComputerStore.Controllers.AddCategoryController,
+                controllerAs: 'controller'
+            })
+            .state('editCategory', {
+                url: '/editCategory/:id',
+                templateUrl: '/ngApp/views/editCategory.html',
+                controller: ComputerStore.Controllers.EditCategoryController,
+                controllerAs: 'controller'
+            })
             .state('laptop', {
                 url: '/laptop/:id',
                 templateUrl: '/ngApp/views/laptop.html',

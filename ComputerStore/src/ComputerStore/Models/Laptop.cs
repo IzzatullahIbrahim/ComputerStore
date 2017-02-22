@@ -15,6 +15,7 @@ namespace ComputerStore.Models
         public string Adapter { get; set; }
         public string Dimension { get; set; }
         public string Weight { get; set; }
+        public string GalleryBatteryDimension { get; set; }
 
         public Category Category { get; set; }
     }

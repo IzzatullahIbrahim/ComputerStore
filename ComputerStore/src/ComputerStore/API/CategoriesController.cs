@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ComputerStore.Data;
 using ComputerStore.Models;
+using ComputerStore.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,38 +14,51 @@ namespace ComputerStore.API
     [Route("api/[controller]")]
     public class CategoriesController : Controller
     {
-        private ApplicationDbContext _db;
+        private ICategoriesService _catService;
 
-        public CategoriesController(ApplicationDbContext db)
+        public CategoriesController(ICategoriesService catService)
         {
-            _db = db;
+            _catService = catService;
         }
 
         [HttpGet]
         public List<Category> Get()
         {
-            List<Category> categories = (from c in _db.Categories
-                                         select new Category
-                                         {
-                                             Id = c.Id,
-                                             Name = c.Name,
-                                             Laptops = c.Laptops
-                                         }).ToList();
+            List<Category> categories = _catService.GetCategories();
             return categories;
         }
 
         [HttpGet("{id}")]
         public Category Get(int id)
         {
-            Category category = (from c in _db.Categories
-                                 where c.Id == id
-                                 select new Category
-                                 {
-                                     Id = c.Id,
-                                     Name = c.Name,
-                                     Laptops = c.Laptops
-                                 }).FirstOrDefault();
+            Category category = _catService.GetCategory(id);
             return category;
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody]Category cat)
+        {
+            if (cat == null)
+            {
+                return BadRequest();
+            }
+            else if (cat.Id == 0)
+            {
+                _catService.AddCategory(cat);
+                return Ok();
+            }
+            else
+            {
+                _catService.EditCategory(cat);
+                return Ok();
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _catService.DeleteCategory(id);
+            return Ok();
         }
     }
 }

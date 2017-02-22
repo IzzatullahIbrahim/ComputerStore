@@ -14,7 +14,8 @@ using System.IO;
 using ComputerStore.Data;
 using ComputerStore.Models;
 using ComputerStore.Services;
-
+using ComputerStore.Interfaces;
+using ComputerStore.Repository;
 
 namespace ComputerStore
 {
@@ -55,11 +56,14 @@ namespace ComputerStore
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-            
 
-            
-                        // add security policies
-                        services.AddAuthorization(options =>
+            //Our Services
+            services.AddScoped<IGenericRepository, GenericRepository>();
+            services.AddScoped<ICategoriesService, CategoriesService>();
+            services.AddScoped<ILaptopsService, LaptopsService>();
+
+            // add security policies
+            services.AddAuthorization(options =>
                         {
                             options.AddPolicy("AdminOnly", policy => policy.RequireClaim("IsAdmin"));
                         });

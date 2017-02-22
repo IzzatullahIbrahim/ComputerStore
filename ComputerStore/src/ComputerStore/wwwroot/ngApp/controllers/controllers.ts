@@ -8,9 +8,15 @@ namespace ComputerStore.Controllers {
         public message = 'Categories Controller Working, or is it?';
         public categories;
 
-        constructor(private $http: ng.IHttpService) {
+        constructor(private $http: ng.IHttpService, private $state: ng.ui.IStateService) {
             this.$http.get('/api/categories').then((response) => {
                 this.categories = response.data;
+            })
+        }
+
+        public deleteCategory(id: number) {
+            this.$http.delete(`/api/categories/` + id).then((response) => {
+                this.$state.go('home');
             })
         }
     }
@@ -21,7 +27,6 @@ namespace ComputerStore.Controllers {
 
         constructor(private $http: ng.IHttpService, private $stateParams: ng.ui.IStateParamsService) {
             let cId = this.$stateParams['id'];
-            console.log(cId);
 
             this.$http.get('/api/categories/' + cId).then((response) => {
                 this.category = response.data;
@@ -29,18 +34,39 @@ namespace ComputerStore.Controllers {
         }
     }
 
-    //export class LaptopsController {
-    //    public message = 'Laptops Controller is working';
-    //    public laptops;
+    export class AddCategoryController {
+        public message = 'Add category controller is working';
+        public category;
 
-    //    constructor(private $http: ng.IHttpService, private $stateParams: ng.ui.IStateParamsService) {
-    //        let cId = this.$stateParams['id'];
+        constructor(private $http: ng.IHttpService, private $state: ng.ui.IStateService) {
 
-    //        this.$http.get('/api/categories/' + cId).then((response) => {
-    //            this.laptops = response.data;
-    //        })
-    //    }
-    //}
+        }
+
+        public addCategory() {
+            this.$http.post('/api/categories', this.category).then((response) => {
+                this.$state.go('home');
+            })
+        }
+    }
+
+    export class EditCategoryController {
+        public message = "Edit category controller is working";
+        public category;
+
+        constructor(private $http: ng.IHttpService, private $state: ng.ui.IStateService, private $stateParams: ng.ui.IStateParamsService) {
+            let cId = this.$stateParams['id'];
+
+            this.$http.get('/api/categories/' + cId).then((response) => {
+                this.category = response.data;
+            })
+        }
+
+        public editCategory() {
+            this.$http.post('/api/categories', this.category).then((response) => {
+                this.$state.go('home');
+            })
+        }
+    }
 
     export class LaptopController {
         public message = 'Laptop Controller is working, or is it?';

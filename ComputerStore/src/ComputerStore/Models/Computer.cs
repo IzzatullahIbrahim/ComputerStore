@@ -38,7 +38,5 @@ namespace ComputerStore.Models
         public string GalleryGPU { get; set; }
         public string GalleryMemory { get; set; }
         public string GalleryStorage { get; set; }
-        public string GalleryWireless { get; set; }
-        public string GalleryOS { get; set; }
     }
 }

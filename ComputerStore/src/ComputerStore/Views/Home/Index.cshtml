@@ -4,25 +4,46 @@
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <base href="/" />
+
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body ng-controller="AccountController as account">
-    <div class="container">
-        <h1>ComputerStore</h1>
+    <nav class="navbar navbar-inverse">
         <div>
-            <a href="/">Home</a> /
-            <a href="/about">About</a> /
-            <a href="/categories">Categories</a> /
-            <a href="/addLaptop">Add a Laptop</a> /
-            <a href="/secret">Secret</a> /
-
-            <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
-            <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
-            <div ng-show="account.isLoggedIn()">
-                [{{account.getUserName()}}]
-            </div> 
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home"><img src="http://i.imgur.com/luJkNzL.png?1"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="judul"><a href="/about">About</a> /</li>
+                <li class="judul"><a href="/categories">Categories</a></li>
+                <li class="judul"><a href="/addCategory">Add a Category</a></li>
+                <li class="judul"><a href="/addLaptop">Add a Laptop</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/secret">Secret</a></li>
+                <li><a href="/register"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                <li><a href="/login" ng-show="!account.isLoggedIn()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a></li>
+            </ul>
         </div>
-        <hr />
+    </nav>
 
+    @*<div>
+        <a href="/">Home</a> /
+        <a href="/about">About</a> /
+        <a href="/categories">Categories</a> /
+        <a href="/addCategory">Add a Category</a> /
+        <a href="/addLaptop">Add a Laptop</a> /
+        <a href="/secret">Secret</a> /
+
+        <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
+        <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
+        <div ng-show="account.isLoggedIn()">
+            [{{account.getUserName()}}]
+        </div>
+    </div>*@
+
+    <div class="container-fluid">
         <ui-view></ui-view>
     </div>
 

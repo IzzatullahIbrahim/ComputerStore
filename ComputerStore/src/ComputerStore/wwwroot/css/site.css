@@ -1,34 +1,126 @@
 body {
-    padding-top: 50px;
+    /*background-image: url("http://s.storage.akamai.coub.com/get/b57/p/coub/simple/cw_timeline_pic/3c11c7feaa3/1887ea5c923924b81d7a7/big_1411645726_1403890129_image.jpg");*/
     padding-bottom: 20px;
+    background-color: black;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
+
+.navbar-header{
+    padding-top:0px;
+}
+
+.navbar.navbar-inverse{
+    margin-bottom: 20px;
+    border-radius: 0px;
     padding-right: 15px;
+    background-color: black;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+.container-fluid{
+    border: 1px solid;
+    padding-left:2.3%;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: white;
+    min-height: 84.715%;
 }
 
-/* Carousel */
-.carousel-caption {
-    z-index: 10 !important;
+.kolom{
+    list-style: none;
+    float: left;
+    margin: 10px;
+    margin-bottom:8px;
 }
 
-    .carousel-caption p {
-        font-size: 20px;
-        line-height: 1.4;
-    }
+.kolom1{
+    margin: 5px;
+    background-color:red;
+    padding: 7.5px;
+    height: 610px;
+    width: 100%;
+    max-width: 250px;
+}
 
-@media (min-width: 768px) {
-    .carousel-caption {
-        z-index: 10 !important;
-    }
+.kolom2{
+    background-color:white;
+    padding: 10px;
+    padding-right: 0px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.img-thumbnail{
+    border: none;
+    margin-right:0px;
+    padding-right:0px;
+}
+
+.Nama{
+    margin-top:-48px;
+    margin-left:-10px;
+    text-align:center;
+    font-size: 2rem;
+}
+
+hr.garis { 
+  margin-top: 3px;
+  height: 30px; 
+  margin-left:-10px;
+  border-style: solid; 
+  border-color: black;
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+hr.garis:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -30px; 
+  border-style: solid; 
+  border-color:black;
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+.container{
+    border: 1px solid;
+    width: 100%;
+    margin: 10px;
+}
+
+.informasi {
+    height: 230px;
+    margin-top: -32.5px;
+    margin-left: -10px;
+    font-size: 1.5rem;
+    list-style:disc;
+    padding-left: 20px;
+    padding-right: 0px;
+    letter-spacing: 0.75px;
+    line-height: 25px;
+    /*border: 1px solid;*/
+}
+
+.harga{
+    /*border: 1px solid;*/
+    margin-left: -10px;
+    padding-left: 10px;
+    font: 2rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+strong{
+    font-size: 2rem;
+    color: red;
+}
+
+.tombol{
+    /*border: 1px solid;*/
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-bottom:-50px;
+    align-items: center;
+    bottom: 0px;
+    font-size: 1rem;
 }
