@@ -24,9 +24,14 @@
                     <strong>${{c.price}}</strong>
                 </div>
 
-                <div class="tombol">
-                    <a ui-sref="editLaptop({id: c.id})" class="btn btn-primary">Edit Laptop</a>
-                    <a ui-sref="deleteLaptop({id: c.id})" class="btn btn-danger">Delete Laptop</a>
+                <div class="tombol1">
+                    <a ng-show="!account.getClaim('IsAdmin')" class="btn btn-primary">Customize</a>
+                    <a ng-show="!account.getClaim('IsAdmin')" class="btn btn-success">Add to Cart</a>
+                </div>
+
+                <div class="tombol2">
+                    <a ui-sref="editLaptop({id: c.id})" ng-show="account.getClaim('IsAdmin')" class="btn btn-primary">Edit Laptop</a>
+                    <a ui-sref="deleteLaptop({id: c.id})" ng-show="account.getClaim('IsAdmin')" class="btn btn-danger">Delete Laptop</a>
                 </div>
             </div>
         </div>

@@ -2,6 +2,29 @@ namespace ComputerStore.Controllers {
 
     export class HomeController {
         public message = 'Hello from the home page!';
+        public prod1Id = 9014;
+        public prod2Id = 9015;
+        public prod3Id = 9016;
+        public prod4Id = 9017;
+        public product1;
+        public product2;
+        public product3;
+        public product4;
+
+        constructor(private $http: ng.IHttpService) {
+            this.$http.get('/api/Laptops/' + this.prod1Id).then((response) => {
+                this.product1 = response.data;
+            })
+            this.$http.get('/api/Laptops/' + this.prod2Id).then((response) => {
+                this.product2 = response.data;
+            })
+            this.$http.get('/api/Laptops/' + this.prod3Id).then((response) => {
+                this.product3 = response.data;
+            })
+            this.$http.get('/api/Laptops/' + this.prod4Id).then((response) => {
+                this.product4 = response.data;
+            })
+        }
     }
 
     export class CategoriesController {

@@ -1,122 +1,175 @@
-﻿{{controller.message}}
+﻿<div class="kotakLaptop">
+    <form ng-submit="controller.editLaptop()">
+        <div class="kotak1">
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Category</span>
+                <select class="form-control catDoang" ng-model="controller.laptop.category.id" ng-options="cat.id as cat.name for cat in controller.categories">
+                    <option value="">------------------------------------------------Select a Category------------------------------------------------</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Brand</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.brand">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Image Url</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.imageUrl">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Chipset</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.motherboard">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">GPU</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.gpu">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 1</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput1">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 3</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput3">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 5</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput5">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 7</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput7">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Storage 1</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.storage1">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Storage 3</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.storage3">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Ethernet</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ethernet">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Bluetooth</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.bluetooth">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Display</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.display">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Security 1</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.security1">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Battery</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.battery">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Dimension</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.dimension">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Gallery Processor</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.galleryProcessor">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Gallery GPU</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.galleryGPU" ">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Gallery Storage</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.galleryStorage">
+            </div>
+        </div>
 
-<form ng-submit="controller.editLaptop()" class="form-control">
-    <label>Brand</label>
-    <input type="text" ng-model="controller.laptop.brand" />
+        <div class="kotak2">
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Model</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.model">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Price</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.price">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Processor</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.processor">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Memory</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.memory">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Operating System</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.operatingSystem">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 2</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput2">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 4</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput4">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 6</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput6">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">I/O Input 8</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.ioInput8">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Storage 2</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.storage2">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Storage 4</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.storage4">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Wireless</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.wireless">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Quantity</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.quantity">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Audio</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.audio">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Security 2</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.security2">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Adapter</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.adapter">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Weight</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.weight">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Gallery Display</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.galleryDisplay">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Gallery Memory</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.galleryMemory">
+            </div>
+            <div class="form-group">
+                <span class="input-group-addon" id="basic-addon1">Gallery Battery and Weight</span>
+                <input type="text" class="form-control tengah" aria-describedby="basic-addon1" ng-model="controller.laptop.galleryBatteryDimension">
+            </div>
+        </div>
 
-    <label>Model</label>
-    <input type="text" ng-model="controller.laptop.model" />
-
-    <label>Price</label>
-    <input type="text" ng-model="controller.laptop.price" />
-
-    <label>Image Url</label>
-    <input type="text" ng-model="controller.laptop.imageUrl" />
-
-    <label>Processor</label>
-    <input type="text" ng-model="controller.laptop.processor" />
-
-    <label>Chipset</label>
-    <input type="text" ng-model="controller.laptop.motherboard" />
-
-    <label>Memory</label>
-    <input type="text" ng-model="controller.laptop.memory" />
-
-    <label>GPU</label>
-    <input type="text" ng-model="controller.laptop.gpu" />
-
-    <label>OS</label>
-    <input type="text" ng-model="controller.laptop.operatingSystem" />
-
-    <label>I/O Input 1</label>
-    <input type="text" ng-model="controller.laptop.ioInput1" />
-
-    <label>I/O Input 2</label>
-    <input type="text" ng-model="controller.laptop.ioInput2" />
-
-    <label>I/O Input 3</label>
-    <input type="text" ng-model="controller.laptop.ioInput3" />
-
-    <label>I/O Input 4</label>
-    <input type="text" ng-model="controller.laptop.ioInput4" />
-
-    <label>I/O Input 5</label>
-    <input type="text" ng-model="controller.laptop.ioInput5" />
-
-    <label>I/O Input 6</label>
-    <input type="text" ng-model="controller.laptop.ioInput6" />
-
-    <label>I/O Input 7</label>
-    <input type="text" ng-model="controller.laptop.ioInput7" />
-
-    <label>I/O Input 8</label>
-    <input type="text" ng-model="controller.laptop.ioInput8" />
-
-    <label>Storage 1</label>
-    <input type="text" ng-model="controller.laptop.storage1" />
-
-    <label>Storage 2</label>
-    <input type="text" ng-model="controller.laptop.storage2" />
-
-    <label>Storage 3</label>
-    <input type="text" ng-model="controller.laptop.storage3" />
-
-    <label>Storage 4</label>
-    <input type="text" ng-model="controller.laptop.storage4" />
-
-    <label>Ethernet</label>
-    <input type="text" ng-model="controller.laptop.ethernet" />
-
-    <label>Wireless</label>
-    <input type="text" ng-model="controller.laptop.wireless" />
-
-    <label>Bluetooth</label>
-    <input type="text" ng-model="controller.laptop.bluetooth" />
-
-    <label>Quantity</label>
-    <input type="text" ng-model="controller.laptop.quantity" />
-
-    <label>Display</label>
-    <input type="text" ng-model="controller.laptop.display" />
-
-    <label>Audio</label>
-    <input type="text" ng-model="controller.laptop.audio" />
-
-    <label>Security 1</label>
-    <input type="text" ng-model="controller.laptop.security1" />
-
-    <label>Security 2</label>
-    <input type="text" ng-model="controller.laptop.security2" />
-
-    <label>Battery</label>
-    <input type="text" ng-model="controller.laptop.battery" />
-
-    <label>Adapter</label>
-    <input type="text" ng-model="controller.laptop.adapter" />
-
-    <label>Dimension</label>
-    <input type="text" ng-model="controller.laptop.dimension" />
-
-    <label>Weight</label>
-    <input type="text" ng-model="controller.laptop.weight" />
-
-    <label>Gallery Processor</label>
-    <input type="text" ng-model="controller.laptop.galleryProcessor" />
-
-    <label>Gallery Display</label>
-    <input type="text" ng-model="controller.laptop.galleryDisplay" />
-
-    <label>Gallery GPU</label>
-    <input type="text" ng-model="controller.laptop.galleryGPU" />
-
-    <label>Gallery Memory</label>
-    <input type="text" ng-model="controller.laptop.galleryMemory" />
-
-    <label>Gallery Storage</label>
-    <input type="text" ng-model="controller.laptop.galleryStorage" />
-
-    <label class="form-group">Gallery Battery and Weight</label>
-    <input type="text" ng-model="controller.laptop.galleryBatteryDimension" />
-
-    <input type="submit" value="Edit Laptop" />
-</form>
+        <div class="tombolLaptop">
+            <button class="btn btn-success">Edit Laptop</button>
+        </div>
+    </form>
+</div>

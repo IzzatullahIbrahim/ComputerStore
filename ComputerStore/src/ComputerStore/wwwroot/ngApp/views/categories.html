@@ -1,7 +1,5 @@
-﻿{{controller.message}}
-
-<div class="container-fluid">
-    <table class="table table-striped table-bordered">
+﻿<div class="container-fluid">
+    <table class="table">
         <tbody>
             <tr ng-repeat="c in controller.categories">
                 <td>
@@ -10,8 +8,8 @@
                     </a>
                 </td>
                 <td>
-                    <a ui-sref="editCategory({id: c.id})" class="btn btn-primary">Edit Category</a>
-                    <a ng-click="controller.deleteCategory(c.id)" class="btn btn-danger">Delete Category</a>
+                    <a ui-sref="editCategory({id: c.id})" class="btn btn-primary" ng-show="account.getClaim('IsAdmin')">Edit Category</a>
+                    <a ng-click="controller.deleteCategory(c.id)" ng-show="account.getClaim('IsAdmin')" class="btn btn-danger">Delete Category</a>
                 </td>
             </tr>
         </tbody>

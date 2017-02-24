@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ComputerStore.Data;
 using ComputerStore.Models;
 using ComputerStore.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -36,6 +37,7 @@ namespace ComputerStore.API
         }
 
         [HttpPost]
+        [Authorize(Policy = "AdminOnly")]
         public IActionResult Post([FromBody]Category cat)
         {
             if (cat == null)
@@ -55,6 +57,7 @@ namespace ComputerStore.API
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminOnly")]
         public IActionResult Delete(int id)
         {
             _catService.DeleteCategory(id);

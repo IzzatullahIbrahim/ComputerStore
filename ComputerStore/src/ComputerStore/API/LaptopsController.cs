@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ComputerStore.Data;
 using ComputerStore.Models;
 using ComputerStore.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 //For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -36,8 +37,9 @@ namespace ComputerStore.API
             Laptop laptop = _lapService.GetLaptop(id);
             return laptop;
         }
-        
+
         [HttpPost]
+        [Authorize(Policy = "AdminOnly")]
         public IActionResult Post([FromBody] Laptop laptop)
         {
             if (laptop == null)
@@ -57,10 +59,12 @@ namespace ComputerStore.API
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminOnly")]
         public IActionResult Delete(int id)
         {
             _lapService.DeleteLaptop(id);
             return Ok();
         }
+
     }
 }

@@ -1,126 +1,306 @@
+/*Outer most div*/
 body {
-    /*background-image: url("http://s.storage.akamai.coub.com/get/b57/p/coub/simple/cw_timeline_pic/3c11c7feaa3/1887ea5c923924b81d7a7/big_1411645726_1403890129_image.jpg");*/
     padding-bottom: 20px;
     background-color: black;
 }
+/*#navText
+{
+    font-size:2.1rem;
+}*/
+/*#picture
+{
+    margin-top: -10%;
+}*/
 
-
-.navbar-header{
-    padding-top:0px;
-}
-
-.navbar.navbar-inverse{
+/*Navbar style*/
+.navbar.navbar-inverse {
     margin-bottom: 20px;
     border-radius: 0px;
     padding-right: 15px;
     background-color: black;
 }
 
-.container-fluid{
-    border: 1px solid;
-    padding-left:2.3%;
-    margin-left: 15px;
-    margin-right: 15px;
+/*Style of main body injection*/
+.container-fluid {
+    /*border: 1px solid;*/
+    border-radius: 40px;
+    padding-left: 2.3%;
+    padding-bottom: 11px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: white;
-    min-height: 84.715%;
+    min-height: 84.71%;
+    /*background-image: url('http://g33k.net/wp-content/uploads/2014/11/Featured_Virtulization.jpg');*/
+    /*background-size: 100%;*/
 }
 
-.kolom{
+
+/*Start of Home Page Styling*/
+.rumah1 {
+    /*border:1px solid;*/
+    border-color: white;
+    text-align: center;
+    margin-left: -12px;
+    /*color: antiquewhite;*/
+}
+
+.kolomRumah {
+    /*border: 1px solid;*/
+    border-color: white;
     list-style: none;
     float: left;
-    margin: 10px;
-    margin-bottom:8px;
+    margin-right: 25px;
+    margin-top: 28px;
 }
 
-.kolom1{
+.kolom1Rumah {
+    /*border: 1px solid;*/
     margin: 5px;
-    background-color:red;
+    background-color: red;
+    padding: 7.5px;
+    height: 286px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.namaRumah {
+    /*border: 1px solid;*/
+    /*margin-top:-48px;*/
+    margin-left: -10px;
+    text-align: center;
+    font-size: 2rem;
+}
+/*End of Home Page Styling*/
+
+/*Start of Category list style*/
+/*List of category*/
+.kolom {
+    /*border: 1px solid;*/
+    list-style: none;
+    float: left;
+    margin: 5.5px;
+    margin-bottom: 5px;
+}
+
+/*Outer category*/
+.kolom1 {
+    /*border: 1px solid;*/
+    margin: 5px;
+    background-color: red;
     padding: 7.5px;
     height: 610px;
     width: 100%;
     max-width: 250px;
 }
 
-.kolom2{
-    background-color:white;
+/*Inner category*/
+.kolom2 {
+    /*border: 1px solid;*/
+    background-color: white;
+    /*background-image: url('http://www.porfiman.com/uploads/P_2DC1C06_2_DF051E35.jpg');
+    background-size: 100%;*/
     padding: 10px;
     padding-right: 0px;
     height: 100%;
     border-radius: 5px;
 }
 
-.img-thumbnail{
+/*Laptop image style*/
+.img-thumbnail {
     border: none;
-    margin-right:0px;
-    padding-right:0px;
+    /*border: 1px solid;*/
+    margin-right: 0px;
+    padding-right: 0px;
 }
 
-.Nama{
-    margin-top:-48px;
-    margin-left:-10px;
-    text-align:center;
+/*Brand and Model Name*/
+.Nama {
+    margin-top: -48px;
+    margin-left: -10px;
+    text-align: center;
     font-size: 2rem;
 }
 
-hr.garis { 
-  margin-top: 3px;
-  height: 30px; 
-  margin-left:-10px;
-  border-style: solid; 
-  border-color: black;
-  border-width: 1px 0 0 0; 
-  border-radius: 20px; 
-} 
-hr.garis:before { 
-  display: block; 
-  content: ""; 
-  height: 30px; 
-  margin-top: -30px; 
-  border-style: solid; 
-  border-color:black;
-  border-width: 0 0 1px 0; 
-  border-radius: 20px; 
+/*Start of line around Brand Model*/
+hr.garis {
+    margin-top: 3px;
+    height: 30px;
+    margin-left: -10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
 }
 
-.container{
-    border: 1px solid;
-    width: 100%;
-    margin: 10px;
-}
+    hr.garis:before {
+        display: block;
+        content: "";
+        height: 30px;
+        margin-top: -30px;
+        border-style: solid;
+        border-color: black;
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+    }
+/*End of line style*/
 
+/*Information and description of laptop*/
 .informasi {
     height: 230px;
     margin-top: -32.5px;
     margin-left: -10px;
     font-size: 1.5rem;
-    list-style:disc;
+    list-style: disc;
     padding-left: 20px;
     padding-right: 0px;
     letter-spacing: 0.75px;
     line-height: 25px;
-    /*border: 1px solid;*/
 }
 
-.harga{
+/*Start of price style*/
+.harga {
     /*border: 1px solid;*/
     margin-left: -10px;
     padding-left: 10px;
     font: 2rem;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
-strong{
+/*color of price*/
+strong {
     font-size: 2rem;
     color: red;
 }
+/*End of line style*/
 
-.tombol{
+/*Button in category list*/
+.tombol1 {
+    margin-left: -10px;
+    padding-left: 22px;
+}
+
+.tombo2 {
     /*border: 1px solid;*/
     margin-left: -10px;
     padding-left: 10px;
-    margin-bottom:-50px;
-    align-items: center;
-    bottom: 0px;
-    font-size: 1rem;
+}
+/*End of category list style*/
+
+/*Start of add and edit for category and laptop page styling*/
+.kotakKategori {
+    /*border: 1px solid;*/
+    margin-left: -10px;
+    margin-top: 20px;
+    margin-right: 2px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*End of Add Category page styling*/
+
+/*Start of Add and Edit Laptop styling*/
+.kotakLaptop {
+    /*border: 1px solid;*/
+    margin-left: -10px;
+    margin-top: 20px;
+    min-height: 600px;
+    margin-right: 2px;
+}
+
+.kotak1 {
+    /*border: 1px solid;*/
+    min-height: 1525px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+.kotak2 {
+    /*border: 1px solid;*/
+    padding-left: 10px;
+    min-height: 500px;
+    width: 50%;
+    float: right;
+    margin-top: -1540px;
+}
+
+/*Select category box in addLaptop page*/
+.catDoang {
+    margin-bottom: 10px;
+}
+
+.tombolLaptop {
+    /*border: 1px solid;*/
+    border-color: red;
+    padding-left: 45.9%;
+    margin-top: -10px;
+    margin-bottom: -8px;
+}
+/*End of Add and Laptop page styling*/
+
+.tengah {
+    text-align: center;
+    border: 1px solid;
+}
+
+/*Start of Register Page Styling*/
+.judulRegister{
+    margin-left: -10px;
+    margin-right: 2px;
+    /*border: 1px solid;*/
+    text-align: center;
+}
+
+.registrasi {
+    /*border: 1px solid;*/
+    margin-left: -10px;
+    margin-top: 20px;
+    margin-right: 2px;
+    width: 50%;
+    padding-right: 10px;
+}
+/*End of Register Page Styling*/
+
+h1{
+    /*margin-left: -10px;*/
+    margin-right: 2px;
+    /*border: 1px solid;*/
+    margin-top: 50px;
+    text-align: center;
+}
+
+.lis{
+    list-style: none;
+    margin-left: -40px;
+}
+
+.laptopSpec{
+    margin-left: -12px;
+    margin-right: 2px;
+    /*border: 1px solid;*/
+    margin-top: 15px;
+    margin-bottom: 5px; 
+}
+
+.foto{
+    margin-top: 16px;
+    border: 1px solid;
+    float:left;
+    margin-bottom: 20px;
+}
+
+.about{
+    padding-right: 10px;
+    margin-top: 50px;
+    /*border: 1px solid;*/
+    text-align: justify;
+}
+
+.karousel{
+    border: 1px solid;
+    margin-top: 20px;
 }

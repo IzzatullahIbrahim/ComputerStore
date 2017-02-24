@@ -1,4 +1,57 @@
-<h2>Home</h2>
-<p>
-    {{controller.message}}
-</p>
+<div class="rumah1">
+    <h1>******Welcome to Zack's Computer store******</h1>
+</div>
+<div class="rumah1">
+    <h2>Here are our featured products</h2>
+</div>
+
+<ul>
+    <li class="kolomRumah">
+        <div class="kolom1Rumah">
+            <div class="kolom2">
+                <a ui-sref="laptop({id: c.id})" class="img-thumbnail">
+                    <img ng-src="{{controller.product1.imageUrl}}" />
+                </a>
+                <div class="namaRumah">
+                    <strong><span>{{controller.product1.brand}}</span><span> </span><span>{{controller.product1.model}}</span></strong>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="kolomRumah">
+        <div class="kolom1Rumah">
+            <div class="kolom2">
+                <a ui-sref="laptop({id: c.id})" class="img-thumbnail">
+                    <img ng-src="{{controller.product2.imageUrl}}" />
+                </a>
+                <div class="namaRumah">
+                    <strong><span>{{controller.product2.brand}}</span><span> </span><span>{{controller.product2.model}}</span></strong>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="kolomRumah">
+        <div class="kolom1Rumah">
+            <div class="kolom2">
+                <a ui-sref="laptop({id: c.id})" class="img-thumbnail">
+                    <img ng-src="{{controller.product3.imageUrl}}" />
+                </a>
+                <div class="namaRumah">
+                    <strong><span>{{controller.product3.brand}}</span><span> </span><span>{{controller.product3.model}}</span></strong>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="kolomRumah">
+        <div class="kolom1Rumah">
+            <div class="kolom2">
+                <a ui-sref="laptop({id: c.id})" class="img-thumbnail">
+                    <img ng-src="{{controller.product4.imageUrl}}" />
+                </a>
+                <div class="namaRumah">
+                    <strong><span>{{controller.product4.brand}}</span><span> </span><span>{{controller.product4.model}}</span></strong>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
